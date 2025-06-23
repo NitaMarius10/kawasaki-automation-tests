@@ -1,8 +1,0 @@
-16:28:48 - Navigăm la pagina de creare cont
-16:28:50 - Am inchis frame-ul de cookie
-16:28:50 - Am introdus Numele: Cuza Alexandru
-16:28:50 - Am introdus Numarul de telefon: 0731194933
-16:28:50 - Am introdus adresa de e-mail: mirkocestu@gufum.com
-16:28:50 - Am introdus parola: Test123.#
-16:28:50 - Completăm formularul: Cuza Alexandru, mirkocestu@gufum.com
-16:28:52 - Testul: CreateAccount s-a finalizat cu succes

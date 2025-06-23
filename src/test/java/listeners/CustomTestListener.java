@@ -4,7 +4,6 @@ import com.aventstack.extentreports.*;
 import org.openqa.selenium.*;
 import org.testng.*;
 import tests.BaseTest;
-import utils.ExtentManager;
 import io.qameta.allure.Allure;
 
 import java.io.*;
@@ -12,7 +11,7 @@ import java.nio.file.*;
 
 public class CustomTestListener implements ITestListener {
 
-    private static final ExtentReports extent = ExtentManager.getInstance();
+
     private static final ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
     private static int testCounter = 1;
 
