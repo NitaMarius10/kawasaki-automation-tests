@@ -13,15 +13,14 @@ pipeline {
         stage('Build and Test') {
             steps {
                 echo 'Running Maven tests...'
-                sh 'mvn clean test'
+                bat 'mvn clean test'
             }
         }
 
         stage('Generate Allure Report') {
             steps {
                 echo 'Generating Allure results...'
-
-                sh 'mvn allure:report'
+                bat 'mvn allure:report'
             }
         }
 
