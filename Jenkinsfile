@@ -10,10 +10,31 @@ pipeline {
     }
 
     stages {
-        stage('Build and Test') {
+        stage('Test - CreateAccountTest') {
             steps {
-                echo 'Running Maven tests...'
-                bat 'mvn clean test'
+                echo 'Running CreateAccountTest...'
+                bat 'mvn -Dtest=tests.CreateAccountTest test'
+            }
+        }
+
+        stage('Test - LoginTest') {
+            steps {
+                echo 'Running LoginTest...'
+                bat 'mvn -Dtest=tests.LoginTest test'
+            }
+        }
+
+        stage('Test - DeleteAccountTest') {
+            steps {
+                echo 'Running DeleteAccountTest...'
+                bat 'mvn -Dtest=tests.DeleteAccountTest test'
+            }
+        }
+
+        stage('Test - InvalidLoginTest') {
+            steps {
+                echo 'Running InvalidLoginTest...'
+                bat 'mvn -Dtest=tests.InvalidLoginTest test'
             }
         }
 

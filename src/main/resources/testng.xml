@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="MyTestSuite" parallel="false">
-    <!-- Listener-ul CustomTestListener se aplică tuturor testelor din suită -->
+
     <listeners>
         <listener class-name="listeners.CustomTestListener" />
         <listener class-name="listeners.CustomSuiteListener" />
