@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven 3.8.5' // Asigură-te că ai configurat Maven în Jenkins
+        maven 'Maven 3.9.6' // Numele exact setat în Jenkins
     }
 
     stages {
@@ -12,13 +12,13 @@ pipeline {
             }
         }
 
-        stage('Build & Test') {
+        stage('Build and Test') {
             steps {
-                sh 'mvn clean test'
+                sh 'mvn clean test -Dsurefire.suiteXmlFiles=testng.xml'
             }
         }
 
-        stage('Generate Allure Report') {
+        stage('Allure Report') {
             steps {
                 allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
             }
@@ -27,7 +27,7 @@ pipeline {
 
     post {
         always {
-            allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
+            archiveArtifacts artifacts: 'target/allure-results/**/*.*', allowEmptyArchive: true
         }
     }
 }
