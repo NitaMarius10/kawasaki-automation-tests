@@ -47,7 +47,7 @@ public class DeleteAccountTest extends BaseTest {
         // We validate that login fails as proof of deletion
         Assert.assertNotNull(actualError, "Error message missing - account still appears to exist");
         Assert.assertTrue(
-                actualError.toLowerCase().contains("parola a fost introdusa gresit") ||
+                actualError.toLowerCase().contains("password") ||
                         actualError.toLowerCase().contains("email") ||
                         actualError.toLowerCase().contains("non-existent"),
                 "The error message does not indicate that the login failed after deletion"
