@@ -5,20 +5,27 @@ pipeline {
         maven 'Maven'
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                git credentialsId: 'github-creds', url: 'https://github.com/NitaMarius10/kawasaki-automation-tests.git'
-            }
-        }
+    environment {
+        MAVEN_OPTS = '-Dmaven.test.failure.ignore=false'
+    }
 
+    stages {
         stage('Build and Test') {
             steps {
-                sh 'mvn clean test -Dsurefire.suiteXmlFiles=testng.xml'
+                echo 'Running Maven tests...'
+                sh 'mvn clean test'
             }
         }
 
-        stage('Allure Report') {
+        stage('Generate Allure Report') {
+            steps {
+                echo 'Generating Allure results...'
+
+                sh 'mvn allure:report'
+            }
+        }
+
+        stage('Publish Allure Report') {
             steps {
                 allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
             }
@@ -27,7 +34,10 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: 'target/allure-results/**/*.*', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'target/**/*.xml', fingerprint: true
+        }
+        failure {
+            echo 'Build failed. Please check test logs.'
         }
     }
 }
