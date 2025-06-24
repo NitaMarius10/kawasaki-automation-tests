@@ -74,17 +74,17 @@ public class TestReport {
 
     public String getDetails() {
         StringBuilder details = new StringBuilder();
-        details.append("Titlu: ").append(testTitle).append("\n")
+        details.append("Title: ").append(testTitle).append("\n")
                 .append("Status: ").append(status ? "Passed" : "Failed").append("\n")
-                .append("Timp de execuție: ").append(getExecutionTime()).append("ms\n")
-                .append("Pași executați:\n");
+                .append("Execution time: ").append(getExecutionTime()).append("ms\n")
+                .append("Steps performed:\n");
 
         for (String log : logs) {
             details.append("- ").append(log).append("\n");
         }
 
         if (!errors.isEmpty()) {
-            details.append("Erori:\n");
+            details.append("Errors:\n");
             for (String error : errors) {
                 details.append("- ").append(error).append("\n");
             }

@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 
-
  //The class that contains only the locators of the elements on the account creation page
 
 public class AccountPageLocators {
