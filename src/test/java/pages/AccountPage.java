@@ -4,7 +4,6 @@ import io.qameta.allure.Allure;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.AccountPageLocators;
 import utils.DataValidator;
 
 import java.time.Duration;
@@ -81,7 +80,7 @@ public class AccountPage extends BasePage {
         Allure.step("I submitted the account creation form");
     }
 
-    // ------ Get Values for Validation ------
+    // Get Values for Validation
 
     public String getFullNameValue() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(AccountPageLocators.FIELD_NAME_AND_LASTNAME))
