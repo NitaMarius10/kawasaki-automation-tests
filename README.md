@@ -4,13 +4,61 @@
 
 🎯 Main Goal Ensure a flawless user experience while reducing manual testing time, increasing delivery speed, and improving product quality through automation.
 
-🛠 Technologies Used Category Tools & Technologies Language Java 21.0.6 Frameworks Selenium WebDriver, TestNG Design Patterns Page Object Model (POM), Data-Driven Testing (DDT) Build Tool Maven Reporting Allure Reports (with automatic screenshots) IDE IntelliJ IDEA Version Control Git, GitHub CI/CD Jenkins Pipeline (in progress)
+🛠 Tools & Technologies 
 
-🔑 Key Features DriverFactory: Centralized WebDriver management using Singleton Pattern RetryAnalyzer: Automatically re-runs unstable tests ScreenshotUtil: Captures screenshots on failure Allure Listeners: Logs and visual attachments for better traceability External Config: Environment variables managed via .properties files
+- Language Java 21.0.6 
 
-✅ Test Coverage Test Type Scenarios Covered Functional ✔ Create account, ✔ Login, ✔ Delete account Negative (DDT) ✔ Login with multiple invalid credentials Coverage estimate: ~60–70% of critical account-related business flows ~20% additional coverage for input validation and security Total coverage for tested modules: ~80–85%
+- Frameworks Selenium WebDriver
 
-🚀 How to Run Prerequisites: Java 21+ Maven Chrome + ChromeDriver Allure installed locally Commands: 
+- TestNG Design Patterns Page Object Model (POM), Data-Driven Testing (DDT) 
+
+- Build Tool Maven 
+
+- Reporting Allure Reports (with automatic screenshots) 
+
+- IDE IntelliJ IDEA 
+
+- Version Control Git, GitHub 
+
+- CI/CD Jenkins Pipeline (in progress)
+
+🔑 Key Features 
+
+- DriverFactory: Centralized WebDriver management using Singleton Pattern 
+
+- RetryAnalyzer: Automatically re-runs unstable tests 
+
+- ScreenshotUtil: Captures screenshots on failure 
+
+- Allure Listeners: Logs and visual attachments for better traceability 
+
+- External Config: Environment variables managed via .properties files
+
+✅ Test Coverage 
+
+Test Type Scenarios Covered Functional 
+
+✔ Create account 
+
+✔ Login
+
+✔ Delete account 
+
+✔ Login with multiple invalid credentials (Negative DDT) 
+
+Coverage estimate: ~60–70% of critical account-related business flows ~20% additional coverage for input validation and security Total coverage for tested modules: ~80–85%
+
+🚀 How to Run Prerequisites: 
+
+- Java 21+ 
+
+- Maven Chrome 
+
+- ChromeDriver 
+
+- Allure installed locally 
+
+Commands: 
 
 1. Select the location of the project in GitBash
 
@@ -36,7 +84,23 @@ allure open target/allure-report
 
 📊 Reporting Type: Allure Reports Location: target/allure-results Screenshots: Automatically captured on failure Benefit: Fast debugging & clear visualization of test results
 
-💡 Skills Demonstrated Skill Area Description Framework Design Built from scratch using OOP and POM principles Data-Driven Testing Implemented with TestNG for flexible test scenarios Visual Reporting Automated Allure integration with screenshots Version Control Git/GitHub usage for collaboration and tracking CI/CD Preparation Jenkins pipeline setup for scalable automation Debugging & Stability RetryAnalyzer for handling flaky tests Real-World Testing E2E and negative test scenarios for production-grade validation
+💡 Skills Demonstrated 
+
+- Building a complete automation framework from scratch
+
+- Applying OOP and POM design pattern
+
+- Implementing Data-Driven Testing with TestNG
+
+- Automating visual reporting with Allure
+
+- Using Git/GitHub professionally
+
+- Preparing for CI/CD integration with Jenkins
+
+- Debugging & stabilizing tests with RetryAnalyzer
+
+- Writing E2E and negative tests for real-world scenarios
 
 📈 Business Impact & Value This project delivers measurable value in a real-world QA context: 
 
@@ -52,7 +116,20 @@ allure open target/allure-report
 
 💼 Professionalism: Demonstrates mastery of industry-standard tools and patterns, making it a strong asset in any QA team. 
 
-📸 Screenshots & Examples (Add your own screenshots or GIFs here to visually showcase test execution and reporting)
+📸 Screenshots & Examples
+
+1. Creating a new account with valid data
+   
+   <img width="2531" height="1300" alt="1" src="https://github.com/user-attachments/assets/307a7bbe-ffcf-402c-ace8-9abc9595d9df" />
+
+2. Login using valid data and login validation
+   
+   <img width="2529" height="1291" alt="2" src="https://github.com/user-attachments/assets/03a32c02-18be-4769-8563-d79e5b16a786" />
+
+3. Account deletion and validation of the impossibility of subsequent authentification
+   
+   <img width="2530" height="1296" alt="3" src="https://github.com/user-attachments/assets/82d2a070-6359-47b6-b01c-dd3c48d991e7" />
+
 
 🙋‍♂️ Why Hire Me Based on This Project
 
