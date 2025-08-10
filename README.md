@@ -10,21 +10,21 @@ A complete, scalable, and maintainable automation testing framework built from s
 
 🛠 Tools & Technologies 
 
-- Language Java 21.0.6 
+- Language: Java 21.0.6 
 
-- Frameworks Selenium WebDriver
+- Frameworks: Selenium WebDriver, TestNG
 
-- TestNG Design Patterns Page Object Model (POM), Data-Driven Testing (DDT) 
+- Design Patterns: Page Object Model (POM), Data-Driven Testing (DDT) 
 
-- Build Tool Maven 
+- Build Tool: Maven 
 
-- Reporting Allure Reports (with automatic screenshots) 
+- Reporting: Allure Reports (with automatic screenshots) 
 
-- IDE IntelliJ IDEA 
+- IDE: IntelliJ IDEA 
 
-- Version Control Git, GitHub 
+- Version Control: Git, GitHub 
 
-- CI/CD Jenkins Pipeline (in progress)
+- CI/CD: Jenkins Pipeline (in progress)
 
 🔑 Key Features 
 
